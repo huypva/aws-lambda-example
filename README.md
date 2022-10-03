@@ -19,13 +19,27 @@ The example project for StringBoot service
 ```
 
 ## Prerequisites
-- Make sure that you have Docker and Docker Compose installed
-  - Windows or macOS:
-    [Install Docker Desktop](https://www.docker.com/get-started)
-  - Linux: [Install Docker](https://www.docker.com/get-started) and then
-    [Docker Compose](https://github.com/docker/compose)
+- Install [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html)
+Make sure that you have a [Amazon Account](https://aws.amazon.com/account/)
+And configurate aws account in ~/.aws/credentials
+```
+[default]
+aws_access_key_id=<your-key>
+aws_secret_access_key=<your-key>
+```
 
-## Build spring-boot application
+- Install [Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
+
+## Build and deploy
+
+Build and deploy all in once by run command
+```shell script
+$ sh build_and_deploy.sh
+```
+
+Or step by step as below
+
+### Build spring-boot application
 
 - Build & start project
 ```shell script
@@ -58,7 +72,7 @@ Create test event in huypva_hello_world function
 
 And result
 
-### Destroy resource on AWS
+## Destroy resource on AWS
 
 ```shell script
 $ cd terraform
