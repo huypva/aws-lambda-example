@@ -41,6 +41,16 @@ nbdist/
 nbactions.xml
 nb-configuration.xml
 
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+*.terraform.lock.*
+terraform/plan.out
+
+
 # OS
 .DS_Store
 

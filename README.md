@@ -10,9 +10,10 @@ The example project for StringBoot service
 ```
 .
 ├── hello-world
-│   ├── Dockerfile
+│   ├── src
+|   ├── pom.xml
 │   ...
-├── docker-compose.yaml
+├── infrastructure
 |
 └── README.md
 ```
@@ -24,50 +25,43 @@ The example project for StringBoot service
   - Linux: [Install Docker](https://www.docker.com/get-started) and then
     [Docker Compose](https://github.com/docker/compose)
 
-## Start infrastructure
-
-```shell script
-$ cd infrastructure
-$ docker-compose up -d
-```
-
-## Start services
-### Start services in local
+## Build spring-boot application
 
 - Build & start project
 ```shell script
 $ cd hello-world
 $ ../mvnw clean package
-$ ../mvnw spring-boot:run
 ...
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  13.632 s
+[INFO] Finished at: 2022-10-03T14:26:40+07:00
+[INFO] ------------------------------------------------------------------------
 ```
 
-### Start services in docker 
+### Create AWS Lambda 
 
 ```shell script
-$ docker-compose -f ./docker-compose-service.yml -p spring-boot-service up -d
+$ cd infrastructure
+$ terraform init
+$ terraform apply
 ```
 
-Run multiple instances
+## Testing
+
+Create test event in huypva_hello_world function
+
+<div align="center">
+    <img src="./assets/images/test_event.png"/>
+</div>
+
+And result
+
+### Destroy resource on AWS
 
 ```shell script
-$ docker-compose -f ./docker-compose-service.yml -p spring-boot-service up -d --scale hello-world=2
-```
-
-## Run testing
-
-```shell script
-curl http://localhost:8081/greet?name=World
-```
-
-## Stop project
-
-- Kill project if start in local mode
-- Stop infrastructure & services in docker
-
-```shell script
-$ docker-compose -f ./docker-compose-infrastructure.yml -p spring-boot-infrastructure down
-$ docker-compose -f ./docker-compose-service.yml -p spring-boot-service down
+$ terraform destroy
 ```
 
 ## Contributing
