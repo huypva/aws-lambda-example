@@ -74,6 +74,10 @@ Create test event in huypva_hello_world function
 
 And result
 
+<div align="center">
+    <img src="./assets/images/test_result.png"/>
+</div>
+
 ## Destroy resource on AWS
 
 ```shell script
