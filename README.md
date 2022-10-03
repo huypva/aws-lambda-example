@@ -52,14 +52,16 @@ $ ../mvnw clean package
 [INFO] Total time:  13.632 s
 [INFO] Finished at: 2022-10-03T14:26:40+07:00
 [INFO] ------------------------------------------------------------------------
+$ cd ..
 ```
 
 ### Create AWS Lambda 
 
 ```shell script
-$ cd infrastructure
+$ cd terraform
 $ terraform init
 $ terraform apply
+$ cd ..
 ```
 
 ## Testing
@@ -77,6 +79,7 @@ And result
 ```shell script
 $ cd terraform
 $ terraform destroy
+$ cd ..
 ```
 
 ## Contributing

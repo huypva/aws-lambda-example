@@ -1,6 +1,6 @@
 printf '\n\nBuilding the Java Lambda Function!\n\n'
 cd hello-world
-mvn clean verify
+mvn clean package
 if [ $? -ne 0 ]; then
   printf '\n\nJava application build failed! No new Lambda Function will be deployed!!!i\n'
   exit -1
