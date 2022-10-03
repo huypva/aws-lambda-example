@@ -18,7 +18,7 @@ resource "aws_iam_role" "iam_for_lambda" {
 EOF
 }
 
-resource "aws_lambda_function" "lambda_book_service" {
+resource "aws_lambda_function" "lambda_hello_world" {
   # If the file is not in the current working directory you will need to include a
   # path.module in the filename.
   filename      = "${path.module}/../hello-world/target/hello-world-0.0.1-SNAPSHOT.jar"

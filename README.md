@@ -13,7 +13,7 @@ The example project for StringBoot service
 │   ├── src
 |   ├── pom.xml
 │   ...
-├── infrastructure
+├── terraform
 |
 └── README.md
 ```
@@ -61,6 +61,7 @@ And result
 ### Destroy resource on AWS
 
 ```shell script
+$ cd terraform
 $ terraform destroy
 ```
 
