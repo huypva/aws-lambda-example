@@ -20,8 +20,8 @@ The example project for StringBoot service
 
 ## Prerequisites
 - Install [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html)
-Make sure that you have a [Amazon Account](https://aws.amazon.com/account/)
-And configurate aws account in ~/.aws/credentials
+
+Make sure that you have a [Amazon Account](https://aws.amazon.com/account/) and configurate aws account in ~/.aws/credentials
 ```
 [default]
 aws_access_key_id=<your-key>
