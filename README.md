@@ -41,7 +41,7 @@ Or step by step as below
 
 ### Build spring-boot application
 
-- Build & start project
+- Build project
 ```shell script
 $ cd hello-world
 $ ../mvnw clean package
